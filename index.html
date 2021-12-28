@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Beat Maker</title>
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <div class="sequencer">
+                <div class="kick-track">
+                    <div class="controls">
+                        <h1 class="track-title">Kick</h1>
+                        <button class="mute kick-volume" data-track="0">
+                            <i class="fas fa-volume-mute"></i>
+                        </button>
+                        <div class="dropdown" id="kickDropdown">
+                            <div class="dropdown-label"></div>
+                            <ul class="dropdown-menu"></ul>
+                        </div>
+                    </div>
+                    <div class="kick">
+                        <div class="pad kick-pad b0"></div>
+                        <div class="pad kick-pad b1"></div>
+                        <div class="pad kick-pad b2"></div>
+                        <div class="pad kick-pad b3"></div>
+                        <div class="pad kick-pad b4"></div>
+                        <div class="pad kick-pad b5"></div>
+                        <div class="pad kick-pad b6"></div>
+                        <div class="pad kick-pad b7"></div>
+                    </div>
+                </div>
+                <div class="snare-track">
+                    <div class="controls">
+                        <h1 class="track-title">Snare</h1>
+                        <button class="mute snare-volume" data-track="1">
+                            <i class="fas fa-volume-mute"></i>
+                        </button>
+                        <div class="dropdown" id="snareDropdown">
+                            <div class="dropdown-label"></div>
+                            <ul class="dropdown-menu"></ul>
+                        </div>
+                    </div>
+                    <div class="snare">
+                        <div class="pad snare-pad b0"></div>
+                        <div class="pad snare-pad b1"></div>
+                        <div class="pad snare-pad b2"></div>
+                        <div class="pad snare-pad b3"></div>
+                        <div class="pad snare-pad b4"></div>
+                        <div class="pad snare-pad b5"></div>
+                        <div class="pad snare-pad b6"></div>
+                        <div class="pad snare-pad b7"></div>
+                    </div>
+                </div>
+                <div class="hihat-track">
+                    <div class="controls">
+                        <h1 class="track-title">Hihat</h1>
+                        <button class="mute hihat-volume" data-track="2">
+                            <i class="fas fa-volume-mute"></i>
+                        </button>
+                        <div class="dropdown" id="hiHatDropdown">
+                            <div class="dropdown-label"></div>
+                            <ul class="dropdown-menu"></ul>
+                        </div>
+                    </div>
+                    <div class="hihat">
+                        <div class="pad hihat-pad b0"></div>
+                        <div class="pad hihat-pad b1"></div>
+                        <div class="pad hihat-pad b2"></div>
+                        <div class="pad hihat-pad b3"></div>
+                        <div class="pad hihat-pad b4"></div>
+                        <div class="pad hihat-pad b5"></div>
+                        <div class="pad hihat-pad b6"></div>
+                        <div class="pad hihat-pad b7"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="btns">
+                <button class="play">Play</button>
+                <div class="tempo">
+                    <input type="range" class="tempo-slider" max="400" min="80" value="150">
+                    <p>Tempo: <span class="tempo-num">150</span></p>
+                </div>
+            </div>
+
+            <audio class="kick-sound" id="kick" src="./sound/kick-classic.wav"></audio>
+            <audio class="snare-sound" id="snare" src="./sound/snare-acoustic01.wav"></audio>
+            <audio class="hihat-sound" id="hihat" src="./sound/hihat-acoustic01.wav"></audio>
+        </div>
+    </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha512-xd+EFQjacRjTkapQNqqRNk8M/7kaek9rFqYMsbpEhTLdzq/3mgXXRXaz1u5rnYFH5mQ9cEZQjGFHFdrJX2CilA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./app.js"></script>
+</body>
+</html>
