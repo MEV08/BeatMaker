@@ -8,7 +8,6 @@ class Dropdown {
         this.$el.querySelector('.dropdown-label').id = `${this.items[0].id}`;
         this.$el.querySelector('.dropdown-label').value = `${this.items[0].value}`;
         this.$el.addEventListener('click', event => {
-            // console.log(event.target)
             if (event.target.classList.contains('dropdown-label')) {
                 if (this.$el.classList.contains('open')) {
                     this.close();
@@ -29,8 +28,6 @@ class Dropdown {
         this.$el.querySelector('.dropdown-label').id = item.id;
         this.$el.querySelector('.dropdown-label').value = item.value;
         this.$el.querySelector('.dropdown-label').innerHTML = `${item.label}<i class="fas fa-caret-down"></i>`;
-        
-        // console.log(item)
         this.close();
     };
     clickThrough(e) {
